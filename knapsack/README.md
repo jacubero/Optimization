@@ -1,58 +1,64 @@
-# Facility Location
+# Knapsack
 
-## Objective and Prerequisites
+## Problem Statement
 
-In this example, we will solve a facility location problem where we want to build warehouses to supply a certain number 
-of supermarkets. We will construct a mixed-integer programming (MIP) model of this problem, implement this model in the 
-Gurobi Python interface, and compute an optimal solution.
+You are provided with a knapsack with limited space and a collection of items with different values and weights. Your task is to maximize the value of items packed into your knapsack without exceeding its total capacity.
 
-This modeling example is at the beginner level, where we assume that you know Python and that you have some knowledge 
-about building mathematical optimization models.
+## Assignment
 
-## Motivation
+Write an algorithm to solve the knapsack problem. The problem is mathematically formulated in the following way. Given $n$ items to choose from, each item $i \in \{ 0, \ldots, n-1 \}$ has a value $v_i$ and a
+weight $w_i$. The knapsack has a limited capacity $K$. Let $x_i$ be a variable that is $1$ if you choose to take item $i$ and $0$ if you leave item $i$ behind. Then the knapsack problem is formalized as the following optimization problem,
 
-The study of facility location problems -also known as location analysis- is a branch of operations research and 
-computational geometry concerned with the optimal placement of facilities to minimize transportation costs while 
-considering factors like avoiding placing hazardous materials near housing, and the location of  competitors' 
-facilities.
+$$\max \displaystyle \sum_{i=0}^{n-1} v_ix_i$$
 
-The Fermat-Weber problem, formulated in the 17'th century, was one of the first facility location problems ever proposed. 
-The Fermat-Weber problem can be described as follows: Given three points in a plane, find a fourth point such that the 
-sum of its distances to the three given points is minimal. This problem can be interpreted as a version of the facility 
-location problem, where the assumption is made that the transportation costs per distance are the same for all 
-destinations.
+Subject to:
 
-Facility location problems have applications in a wide variety of industries. For supply chain management and logistics, 
-this problem  can be used to find the optimal location for stores, factories, warehouses, etc. Other applications range 
-from public policy (e.g. positioning  police officers in a city), telecommunications (e.g. cell towers in a network), 
-and even particle physics (e.g. separation distance between repulsive charges). Another application of the facility 
-location problem is to determine the locations for natural gas transmission equipment. Finally, facility location 
-problems can be applied to cluster analysis.
+$$\displaystyle \sum_{i=0}^{n-1} w_ix_i \leq K \text{ where } x_i \in \{0,1} \ \forall i \in \{ 0, \ldots, n-1 \}$$
 
-## Problem Description
+## Data Format Specification
 
-A large supermarket chain in the UK needs to build warehouses for a set of supermarkets it is opening in Northern 
-England. The locations of the supermarkets have been decided, but the locations of the warehouses have yet to be 
-determined.
+A knapsack input contains $n+1$ lines. The first line contains two integers, the first is the number of items in the problem, $n$. The second number is the capacity of the knapsack, $K$. The remaining lines present the data for each of the items. Each line, $i \in \{ 0, \ldots, n-1 \}$ contains two integers, the item's value $v_i$ followed by its weight $w_i$.
 
-Several good candidate locations for the warehouses have been identified, but decisions must be made regarding 
-how many warehouses to open and at which candidate locations to build them.
+Input Format:
 
-Opening many warehouses would be advantageous as this would reduce the average distance a truck has to drive from the 
-warehouse to the supermarket, and hence reduce the delivery cost. However, opening a warehouse has a fixed cost 
-associated with it.
+```
+n K
+v_0 w_0
+v_1 w_1
+...
+v_{n-1} w_{n-1}
+```
 
-In this example, our goal is to find the optimal tradeoff between delivery cost and the cost of building new facilities.
+The output contains a knapsack solution and is made of two lines. The first line contains two values $obj$ and $opt$. $obj$ is the total value of the items selected to go into the knapsack (i.e. the objective value). $opt$ should be $1$ if your algorithm proved optimality and $0$ otherwise. The next line is a list of n 0/1-values, one for each of the $x_i$ variables. This line encodes the solution.
 
-## Proposed Solution
+Output Format:
 
-A mixed-integer programming (MIP) formulation for the facility location problem.
+```
+obj opt
+x_0 x_1 x_2 ... x_{n-1}
+```
 
-## View the notebook
+It is essential that the value order in the solution output matches the value order of the input.
 
-[Google Colab Link](https://colab.research.google.com/github/Gurobi/modeling-examples/blob/master/facility_location/facility_location.ipynb)
+## Examples
 
-----
-For details on licensing or on running the notebooks, see the overview on [Modeling Examples](../)
+Input example:
 
-© Gurobi Optimization, LLC
+```
+4 11
+8 4
+10 5
+15 8
+4 3
+```
+
+Output example:
+
+```
+19 0
+0 0 1 1
+```
+
+## View the notebooks
+
+[Solution using Branch and Bound with OR Tools](https://colab.research.google.com/github/jacubero/Optimization/blob/master/knapsack/or_branch_and_bound.ipynb)
