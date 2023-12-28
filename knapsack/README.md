@@ -13,7 +13,7 @@ $$\max \displaystyle \sum_{i=0}^{n-1} v_ix_i$$
 
 Subject to:
 
-$$\displaystyle \sum_{i=0}^{n-1} w_ix_i \leq K \text{ where } x_i \in \{0,1} \ \forall i \in \{ 0, \ldots, n-1 \}$$
+$$\displaystyle \sum_{i=0}^{n-1} w_ix_i \leq K \text{ where } x_i \in \{0,1\} \ \forall i \in \{ 0, \ldots, n-1 \}$$
 
 ## Data Format Specification
 
