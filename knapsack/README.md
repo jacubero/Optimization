@@ -61,4 +61,6 @@ Output example:
 
 ## View the notebooks
 
+[Solution using Branch and Bound](https://colab.research.google.com/github/jacubero/Optimization/blob/master/knapsack/branch_and_bound.ipynb)
+
 [Solution using Branch and Bound with OR Tools](https://colab.research.google.com/github/jacubero/Optimization/blob/master/knapsack/or_branch_and_bound.ipynb)
