@@ -2,14 +2,18 @@
 
 ## Problem Statement
 
-A distribution company uses bulk storage facilities to provide goods to many different customers. The goal of this problem is to determine which facilities will be the
-most cost eective for serving the customers. The complexity of the problem comes from the fact
-that each facility has dierent costs and storage capabilities.1
+A distribution company uses bulk storage facilities to provide goods to many different customers. The goal of this problem is to determine which facilities will be the most cost effective for serving the customers. The complexity of the problem comes from the fact that each facility has different costs and storage capabilities.
 
 ## Assignment
 
-Write an algorithm to solve the knapsack problem. The problem is mathematically formulated in the following way. Given $n$ items to choose from, each item $i \in \{ 0, \ldots, n-1 \}$ has a value $v_i$ and a
-weight $w_i$. The knapsack has a limited capacity $K$. Let $x_i$ be a variable that is $1$ if you choose to take item $i$ and $0$ if you leave item $i$ behind. Then the knapsack problem is formalized as the following optimization problem,
+Write an algorithm to solve the facility location problem. The problem is mathematically formu-
+lated in the following way: there are N = 0 : : : n􀀀1 facilities to choose from and M = n : : : n+m􀀀1
+customers that need to be served. Each facility, f 2 N has a setup cost sf and a capacity capf .
+Each customer, c 2 M, has a demand dc. Both the facilities and customers are located in a Euclid-
+ian space, hxi; yii i 2 N [M. The cost to deliver goods to a particular customer c from a facility
+f is the Euclidean distance between two locations, dist(f ; c).2 Lastly, all customers must be served
+by exactly 1 facility. Let af be a set variable denoting the customers assigned to facility f. Then
+the facility location problem is formalized as the following optimization problem:
 
 $$\max \displaystyle \sum_{i=0}^{n-1} v_ix_i$$
 
