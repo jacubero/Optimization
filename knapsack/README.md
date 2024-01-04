@@ -6,8 +6,7 @@ You are provided with a knapsack with limited space and a collection of items wi
 
 ## Assignment
 
-Write an algorithm to solve the knapsack problem. The problem is mathematically formulated in the following way. Given $n$ items to choose from, each item $i \in \{ 0, \ldots, n-1 \}$ has a value $v_i$ and a
-weight $w_i$. The knapsack has a limited capacity $K$. Let $x_i$ be a variable that is $1$ if you choose to take item $i$ and $0$ if you leave item $i$ behind. Then the knapsack problem is formalized as the following optimization problem,
+Write an algorithm to solve the knapsack problem. The problem is mathematically formulated in the following way. Given $n$ items to choose from, each item $i \in \{ 0, \ldots, n-1 \}$ has a value $v_i$ and a weight $w_i$. The knapsack has a limited capacity $K$. Let $x_i$ be a variable that is $1$ if you choose to take item $i$ and $0$ if you leave item $i$ behind. Then the knapsack problem is formalized as the following optimization problem,
 
 $$\max \displaystyle \sum_{i=0}^{n-1} v_ix_i$$
 
