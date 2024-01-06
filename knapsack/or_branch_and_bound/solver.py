@@ -4,8 +4,6 @@
 from ortools.algorithms.python import knapsack_solver
 
 def solve_it(input_data):
-    # Modify this code to run your optimization algorithm
-
     # parse the input
     lines = input_data.split('\n')
 

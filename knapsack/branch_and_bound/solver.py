@@ -88,8 +88,6 @@ def search(items, capacity):
     return max_value, max_taken
 
 def solve_it(input_data):
-    # Modify this code to run your optimization algorithm
-
     # parse the input
     lines = input_data.split('\n')
 

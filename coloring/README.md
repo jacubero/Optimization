@@ -6,14 +6,13 @@ In this assignment you will design an algorithm to find the smallest coloring of
 
 ## Assignment
 
-Write an algorithm to minimize the coloring of a graph. The problem is mathematically formulated in the following way. Given a graph $G = \langle N, E \rangle$ with nodes $N \in \{ 0, \ldots, n-1 \}$ and edges $E$, let $c_i \in \mathcal{N}$ be a variable denoting the color of node $i$. Then the graph coloring problem is formalized as the
-following optimization problem,
+Write an algorithm to minimize the coloring of a graph. The problem is mathematically formulated in the following way. Given a graph $G = (V, E, \phi)$ with nodes $V = \{ 0, \ldots, n-1 \}$, edges $E \subseteq \{ (i,j) \ \vert \ (i,j) \in V^2 \wedge (i \neq j) \}$ and incidence function $\phi$ mapping every edge to an unordered pair of vertices. Let $c_i \subseteq \{ 0, \ldots, n-1 \}$ be a variable denoting the color of node $i$. Then the graph coloring problem is formalized as the following optimization problem,
 
-$$\max_{i \in \{ 0, \ldots, n-1 \}} c_i$$
+$$\min \max_{i \in \{ 0, \ldots, n-1 \}} c_i$$
 
 Subject to:
 
-$$c_i \neq c_j \left( \langle i, j \rangle \in E \right)$$
+$$c_i \neq c_j \forall (i,j) \in E$$
 
 ## Data Format Specification
 
