@@ -230,7 +230,7 @@ def search(adjacent_dict, color_list, init_color_count,node_count):
             feasible, step_count = is_feasible(adjacent_dict, color_list, color_count, tabu_limit)
 
             if feasible:
-                #print(f"{color_count} color is feasible, tried {step_count} step")
+                #print(f"{color_count} colors is feasible, tried {step_count} step")
                 feasible_color_list = color_list
                 feasible_color_count = color_count
                 filename = str(color_count) + ".txt"
@@ -244,7 +244,7 @@ def search(adjacent_dict, color_list, init_color_count,node_count):
             if retry_count >= retry_limit:
                  return feasible_color_list, feasible_color_count
 
-            #print(f"[Color {color_count:4d}][Retry {retry_count:5d}] reinitializing color")
+            #print(f"[Number of colors {color_count:4d}][Retry {retry_count:5d}] reinitializing color")
             color_list = remove_color(feasible_color_list, feasible_color_count)
 
     return feasible_color_list, feasible_color_count
