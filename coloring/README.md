@@ -59,6 +59,6 @@ Output example:
 
 ## View the notebooks
 
-[Solution using Tabu search](https://colab.research.google.com/github/jacubero/Optimization/blob/master/coloring/tabu.ipynb)
-
 [Solution using DSatur algorithm](https://colab.research.google.com/github/jacubero/Optimization/blob/master/coloring/dsatur.ipynb)
+
+[Solution using Tabu search](https://colab.research.google.com/github/jacubero/Optimization/blob/master/coloring/tabu.ipynb)
