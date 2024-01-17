@@ -61,4 +61,6 @@ Output example:
 
 [Solution using DSatur algorithm](https://colab.research.google.com/github/jacubero/Optimization/blob/master/coloring/dsatur.ipynb)
 
+[Solution using MIP with pyomo](https://colab.research.google.com/github/jacubero/Optimization/blob/master/coloring/pyomo.ipynb)
+
 [Solution using Tabu search](https://colab.research.google.com/github/jacubero/Optimization/blob/master/coloring/tabu.ipynb)

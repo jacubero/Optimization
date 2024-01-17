@@ -12,5 +12,8 @@ These modeling examples are coded using python and distributed as Jupyter Notebo
 - [Knapsack:](knapsack)
   In the knapsack problem, you need to pack a set of items, with given values and sizes (such as weights or volumes), into a container with a maximum capacity. If the total size of the items exceeds the capacity, you can't pack them all. In that case, the problem is to choose a subset of the items of maximum total value that will fit in the container.
 
+- [Graph Coloring:](coloring)
+  Graph coloring refers to the problem of coloring vertices of a graph in such a way that no two adjacent nodes have the same color. 
+
 - [Facility Location:](facility_location)
   In this example, we will show you how to tackle a facility location problem that involves determining the number and location of warehouses that are needed to supply a group of supermarkets.
