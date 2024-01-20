@@ -63,4 +63,6 @@ Output example:
 
 [Solution using MIP with pyomo](https://colab.research.google.com/github/jacubero/Optimization/blob/master/coloring/pyomo.ipynb)
 
+[Another solution using MIP with pyomo](https://colab.research.google.com/github/jacubero/Optimization/blob/master/coloring/bruscalia.ipynb)
+
 [Solution using Tabu search](https://colab.research.google.com/github/jacubero/Optimization/blob/master/coloring/tabu.ipynb)
